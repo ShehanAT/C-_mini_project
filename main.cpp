@@ -9,9 +9,13 @@
 #include <iostream>
 #include "integerAddition.h"
 #include "cinInteger.h"
+#include "bodyMassIndexCalculator.h"
+#include <iomanip>
+
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    cinInteger();
+    cout << "Your BMI is: " << setprecision(4) << fixed << BMICalculator() << "\n";
     return 0;
 }
 
