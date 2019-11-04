@@ -1,14 +1,15 @@
 //
-//  secondFile.hpp
+//  cinInteger.h
 //  testing1
 //
 //  Created by Shehan Atuk on 2019-11-04.
 //  Copyright © 2019 Shehan Atuk. All rights reserved.
 //
 
-#ifndef secondFile_hpp
-#define secondFile_hpp
+#ifndef cinInteger_h
+#define cinInteger_h
 
-#include <stdio.h>
+#include <iostream>
+int cinInteger();
 
-#endif /* secondFile_hpp */
+#endif /* cinInteger_h */

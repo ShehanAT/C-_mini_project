@@ -8,9 +8,10 @@
 
 #include <iostream>
 #include "integerAddition.h"
+#include "cinInteger.h"
 
 int main(int argc, const char * argv[]) {
-    integerAddition();
+    cinInteger();
     return 0;
 }
 
