@@ -1,0 +1,15 @@
+//
+//  integerAddition.h
+//  testing1
+//
+//  Created by Shehan Atuk on 2019-11-04.
+//  Copyright © 2019 Shehan Atuk. All rights reserved.
+//
+
+#ifndef integerAddition_h
+#define integerAddition_h
+
+#include <iostream>
+int integerAddition();
+
+#endif /* integerAddition_h */

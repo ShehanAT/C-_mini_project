@@ -7,9 +7,10 @@
 //
 
 #include <iostream>
+#include "integerAddition.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Welcome to C++\n";
+    integerAddition();
     return 0;
 }
+

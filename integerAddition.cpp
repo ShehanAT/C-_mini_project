@@ -5,28 +5,32 @@
 //  Created by Shehan Atuk on 2019-11-04.
 //  Copyright © 2019 Shehan Atuk. All rights reserved.
 //
+//
 
-#include <iostream> 
-#include "integerAddition.hpp"
+#include <iostream>
 
-int main(int argc, const char * argv[]) {
+
+
+using namespace std;
+
+int integerAddition() {
     // insert code here...
     int integer1{0};
     int integer2{0};
     int sum{0};
+
+    cout << "Welcome to C++\n";
+    cout << "Hello, Welcome to C++\n";
     
-    std::cout << "Welcome to C++\n";
-    std::cout << "Hello, Welcome to C++\n";
-    
-    std::cout << "Enter first integer";
-    std::cin >> integer1;
-    
-    std::cout << "Enter second integer";
-    std::cin >> integer2;
-    
+    cout << "Enter first integer";
+    cin >> integer1;
+
+    cout << "Enter second integer";
+    cin >> integer2;
+
     sum = integer1 + integer2;
-        
-    std::cout << "The sum of the two integers is: " << sum << std::endl;
-    
+
+    cout << "The sum of the two integers is: " << sum << endl;
+
     return 0;
 }
