@@ -34,8 +34,13 @@ public:
     int getAge(){
         return age;
     }
+    
+    int getWeightInPounds(){
+        return weightInPounds;
+    }
 private:
     std::string name;
     int age;
+    int weightInPounds{130};
 };
 #endif /* runner_h */
