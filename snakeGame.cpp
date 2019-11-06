@@ -170,14 +170,14 @@ void Algorithm(){
     
 }
 
-int main(){
-    Setup();
-    while(!gameOver){
-        Draw();
-        Input();
-        Algorithm();
-    }
-    return 0;
-}
+//int main(){
+//    Setup();
+//    while(!gameOver){
+//        Draw();
+//        Input();
+//        Algorithm();
+//    }
+//    return 0;
+//}
 
 
