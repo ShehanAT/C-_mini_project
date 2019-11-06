@@ -20,9 +20,10 @@ const int height = 17;
 
 int x, y, fruitX, fruitY, score;
 
-int tailX[100], tailY[100]; //snake coordinates
+int tailX[100], tailY[100]; //each snake tail segment coordinates stored here
 
-int nTail;
+
+int nTail;//length of snake tail
 
 enum eDirection{STOP = 0, LEFT, RIGHT, UP, DOWN}; //controls
 
@@ -45,11 +46,11 @@ void Setup(){
 }
 
 void Draw(){
-    system("cls");
+    //system("cls");
     for(int i = 0 ; i < width + 2 ; i++){
         cout << "#";
-        cout << endl;
     }
+    cout << endl;
     for(int i = 0 ; i < height; i++){
         for(int j = 0 ; j < width ; j++){
             if(j == 0){
@@ -72,40 +73,39 @@ void Draw(){
                 if(!print){
                     cout << " ";
                 }
-                if(j == width - 1){
-                    cout << "#";
-                }
+             
             }
-            cout << endl;
+            if(j == width - 1){
+                cout << "#";
+            }
         }
+        cout << endl;
         
     }
     for(int i = 0 ; i < width + 2 ; i++){
         cout << "#";
-        cout << endl;
-        cout << "Score: " << score << endl;
     }
+    cout << endl;
+    cout << "Score: " << score << endl;
 }
 
 void Input(){
-    if(_kbhit()){
-        switch(getch()){
-            case 'a':
-                dir = LEFT;
-                break;
-            case 'd':
-                dir = RIGHT;
-                break;
-            case 'w':
-                dir = UP;
-                break;
-            case 's':
-                dir = DOWN;
-                break;
-            case 'x':
-                gameOver = true;
-                break;
-        }
+    switch(getchar()){
+        case 'a':
+            dir = LEFT;
+            break;
+        case 'd':
+            dir = RIGHT;
+            break;
+        case 'w':
+            dir = UP;
+            break;
+        case 's':
+            dir = DOWN;
+            break;
+        case 'x':
+            gameOver = true;
+            break;
     }
 }
 
@@ -143,6 +143,7 @@ void Algorithm(){
         default:
             break;
     }
+    // if out-of-bounds current pos out-of-bounds reset current pos to opposite side of board
     if(x >= width){
         x = 0;
     }
@@ -156,13 +157,13 @@ void Algorithm(){
         y = height - 1;
     }
     for(int i = 0; i < nTail; i++){
-        if(tailX[i] == x && tailY[i] == y){
+        if(tailX[i] == x && tailY[i] == y){//if current coord's are on any of snake tail segments then gameOver
             gameOver = true;
         }
     }
-    if(x == fruitX && y == fruitY){
+    if(x == fruitX && y == fruitY){//level up condition
         score += 10;
-        fruitX = rand() % width;
+        fruitX = rand() % width; //regenerates fruit coordinates if snake got to fruit
         fruitY = rand() % height;
         nTail++;
     }
