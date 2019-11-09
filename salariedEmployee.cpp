@@ -32,8 +32,8 @@ double SalariedEmployee::earnings() const { return getWeeklySalary(); }
 string SalariedEmployee::toString() const {
     ostringstream output;
     output << fixed << setprecision(2);
-    output << "Salaried Employee: ";
+    output << "\nSalaried Employee\n";
     output << Employee::toString() << "\n";
-    output << "Weekly Salary: " << getWeeklySalary();
+    output << "Weekly Salary: " << getWeeklySalary() << "\n";
     return output.str();
 }
