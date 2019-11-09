@@ -10,16 +10,14 @@
 #define salariedEmployee_h
 
 #include <stdio.h>
-#include "employee.h"
 #include <string.h>
-#endif /* salariedEmployee_h */
-
+#include "employee.h"
 using namespace std;
 
 class SalariedEmployee : public Employee{
 public:
     SalariedEmployee(const string&, const string&, const string&, double = 0.0);
-    
+    virtual ~SalariedEmployee() = default; //virtual destructor
     //setter and getter for weekly salary
     void setWeeklySalary(double);
     double getWeeklySalary() const;
@@ -33,3 +31,4 @@ private:
     double weeklySalary;
     
 };
+#endif /* salariedEmployee_h */
