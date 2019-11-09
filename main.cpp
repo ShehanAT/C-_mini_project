@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
     
     BasePlusCommissionEmployee employee3{"Boaz", "Job", "439-345-923", 0.88, 3.45, 20.00};
     
-    cout << "Employees processed through static binding: \n";
+    cout << "Employees processed through static binding:";
     cout << employee1.toString();
     cout << "Earned: " << employee1.earnings();
     cout << "\n\n";
