@@ -71,4 +71,7 @@ void virtualEmployeesViaReference(const Employee& employeeRef){//calling by refe
     cout << employeeRef.toString();
     cout << "\nEarned: " << employeeRef.earnings() << "\n";
 }
+/*
+ All virtual function called are resolved at runtime via dynamic binding
+ */
 
